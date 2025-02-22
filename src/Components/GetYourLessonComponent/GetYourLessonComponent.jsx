@@ -8,9 +8,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+} from "../ui/form";
+import { Input } from "../ui/input.tsx";
+import { Textarea } from "../ui/textarea.tsx";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 

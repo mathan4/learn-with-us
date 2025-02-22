@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button.tsx";
 import {
   Form,
   FormControl,
@@ -8,8 +8,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+} from "../ui/form.tsx";
+import { Input } from "../ui/input.tsx";
 import { useForm } from "react-hook-form";
 
 const LoginPageComponent = () => {

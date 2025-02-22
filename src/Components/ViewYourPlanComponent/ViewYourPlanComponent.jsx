@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button.tsx";
 import { useReactToPrint } from 'react-to-print';
-import { Textarea } from "@/components/ui/textarea";
+
 
 const ViewYourPlanComponent = () => {
   const lessonPlan = localStorage.getItem('lessonPlan');
