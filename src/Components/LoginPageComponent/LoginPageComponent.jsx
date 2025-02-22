@@ -11,8 +11,11 @@ import {
 } from "../ui/form.tsx";
 import { Input } from "../ui/input.tsx";
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
 
 const LoginPageComponent = () => {
+
+  const navigate = useNavigate();
 
   const form = useForm({
     defaultValues: {
@@ -26,10 +29,9 @@ const LoginPageComponent = () => {
         if(data.password=="demopass"){
             alert("Successfull login")
             form.reset()
-            window.location.href='/GetYourLesson'
+            navigate('/GetYourLesson');
     }else{
         alert("Incorrect password")
-        
     }
     }
     else{

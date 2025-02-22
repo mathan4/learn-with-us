@@ -13,8 +13,10 @@ import { Input } from "../ui/input.tsx";
 import { Textarea } from "../ui/textarea.tsx";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const GetYourLessonComponent = () => {
+  const navigate=useNavigate();
   const form = useForm({
     defaultValues: {
       Topic: "",
@@ -86,7 +88,7 @@ const GetYourLessonComponent = () => {
         const lessonPlan = response.data.candidates[0].content.parts[0].text;
         console.log(lessonPlan)
         localStorage.setItem('lessonPlan',lessonPlan)
-        window.location.href='/ViewYourPlan'
+        navigate('/ViewYourPlan');
       })
       .catch((error) => {
         console.error("Error:", error);
